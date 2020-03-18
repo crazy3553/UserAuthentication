@@ -1,0 +1,112 @@
+body {
+  height: 657px;
+  margin: 0px;
+  background: linear-gradient(#33ccff 0%, #9999ff 100%);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.container {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 27%;
+  border-radius: 25px;
+  position: fixed;
+  height: 90%;
+  margin-left: 37%;
+  background: linear-gradient(to bottom, rgb(244, 246, 247) 5%, #e4e4ddf3 55%);
+  margin-top: 30px;
+  text-align: justify;
+  margin-right: 40%;
+  display: block;
+  overflow:hidden;
+}
+.gridDisplay {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 20px;
+  text-align: center;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+.ResultPanel {
+  width: 100%auto;
+  height: 10%;
+  text-align: right;
+  margin-right: 10%;
+  overflow:hidden;
+}
+.HistoryPanel {
+  width: 100%auto;
+  height: 10%;
+  text-align: right;
+  margin-right: 10%;
+  margin-top: 10%;
+  overflow:hidden;
+}
+button {
+  color: #477f92d3;
+  border-radius: 50px;
+  font-size: 21px;
+  cursor: pointer;
+  padding: 20px;
+  border-width: 0px;
+  outline: none;
+}
+.equals {
+  color: whitesmoke;
+  border-radius: 25px;
+  font-size: 30px;
+  width: 200%;
+  padding: 10px;
+  background: rgb(90, 210, 231);
+}
+.rightOperator {
+  box-shadow: 0px 2px rgb(90, 210, 231);
+  color: whitesmoke;
+  background: rgb(90, 210, 231);
+}
+.ResultPanelFonts {
+  color: #477f92d3;
+  font-size: 30px;
+  font-weight: 450;
+}
+.HistoryPanelFonts {
+  color: #477f92d3;
+  font-size: 25px;
+  font-weight: 400;
+}
+/*********responsive style***********/
+@media only screen and  (max-width: 1024px) {
+  .container{
+    width: auto;
+    height: auto;
+    left: 2%;
+    right: 2%;
+    margin: auto;
+    overflow-y: auto;
+    top: 2%;
+    bottom: 2%;
+  }
+  .gridDisplay{
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+
+/*------------------------------LandScape Mode CSS------------------------------*/
+@media only screen and (max-device-width:1024px  ) and (orientation: landscape){
+  .container{    width: 70%;  }
+  .HistoryPanel{ margin-top: 2%;}
+  .ResultPanel{ margin-bottom: 1%;}
+  .gridDisplay{
+    padding-left: 10%;
+    padding-right: 10%;
+    grid-template-rows: 35px 35px 35px 35px 35px;
+    grid-template-columns: 80px 80px 80px 80px;
+    /* margin-left: 35px;
+    margin-right: 35px; */
+  }
+  button , button.equals {
+    padding: 0;
+  }
+}

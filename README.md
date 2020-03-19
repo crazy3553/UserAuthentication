@@ -16,6 +16,4 @@
 
 - * To run the project
     -->npm start
-- * For the build
-    -->npm nuild
 - * Application will run in http://localhost:9090 environment

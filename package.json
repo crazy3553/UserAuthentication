@@ -10,23 +10,25 @@
   "scripts": {
     "start": "webpack-dev-server --open",
     "dev": "webpack --mode development",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "mock:api": "json-server --watch db.json --port 4000"
   },
   "dependencies": {
     "@babel/core": "^7.7.2",
-    "@devexpress/dx-react-core": "^2.3.2",
-    "@devexpress/dx-react-grid": "^2.3.2",
+    "axios": "^0.19.2",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-polyfill": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
+    "bootstrap": "^4.4.1",
     "dotenv-webpack": "^1.7.0",
+    "history": "^4.10.1",
     "npm": "^6.13.6",
     "react": "^16.12.0",
     "react-bootstrap": "^1.0.0-beta.17",
     "react-dom": ">=16.8.0",
     "react-redux": "^7.2.0",
-    "react-textfit": "^1.1.0",
+    "react-router-dom": "^5.1.2",
     "redux": "^3.7.2",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0"

@@ -2,10 +2,12 @@ import React from "react";
 import { App } from "./App/App";
 import { render } from "react-dom";
 import { Provider } from "react-redux";
-
+import {store} from './_helpers';
+import "./Assets/Style/style.css";
+import  "bootstrap/dist/css/bootstrap.min.css";
 render(
-  <div>
+  <Provider store={store}>
     <App />
-  </div>,
+  </Provider>,
   document.getElementById("root")
 );

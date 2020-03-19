@@ -3,7 +3,8 @@ import { Router, Route, BrowserRouter } from "react-router-dom";
 import { Registration } from "../Components/Registration/Registration";
 import { Login } from "../Components/Login/Login";
 import { Dashboard } from "../Components/Dashboard/Dashboard";
-import { history } from "../_helpers";
+import { history, store } from "../_helpers";
+import { CheckAdminAccount } from "../_actions";
 export class App extends Component {
   render() {
     return (

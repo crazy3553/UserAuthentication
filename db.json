@@ -1,24 +1,5 @@
 {
-  "User_Role": [
-    {
-      "username": "test1@gmail.com",
-      "role": "admin"
-    }
-  ],
-  "User_Login": [
-    {
-      "username": "hruday@gmail.com",
-      "password": "hruday123"
-    }
-  ],
-  "UserDetails": [
-    {
-      "id": 1,
-      "name": "test1",
-      "age": "11",
-      "gender": "male",
-      "email": "test1@gmail.com",
-      "phoneNo": "9415346313"
-    }
-  ]
+  "User_Role": [],
+  "User_Login": [],
+  "UserDetails": []
 }

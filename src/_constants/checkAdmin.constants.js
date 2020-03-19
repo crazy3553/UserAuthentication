@@ -1,0 +1,5 @@
+export const checkAdminConstant = {
+    CHK_ADMIN_ACCESS: "CHK_ADMIN_ACCESS_SUCCESS",
+    CHK_ADMIN_ACCESS_ERROR: "CHK_ADMIN_ACCESS_ERROR"
+  };
+  

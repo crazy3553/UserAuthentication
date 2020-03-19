@@ -1,7 +1,8 @@
 import React, { Component } from "react";
+import {connect} from "react-redux";
 import { Form, Button, Col, Container, Card } from "react-bootstrap";
-import {history} from '../../_helpers';
-export class Login extends Component {
+import { history } from "../../_helpers";
+class Login extends Component {
   constructor(props) {
     super(props);
     this.redirectRegistration = this.redirectRegistration.bind(this);
@@ -9,6 +10,7 @@ export class Login extends Component {
   redirectRegistration = () => {
     history.push("/Registration");
   };
+ 
   render() {
     return (
       <div>
@@ -59,3 +61,11 @@ export class Login extends Component {
     );
   }
 }
+function mapStateToProps(state) {
+  const { chkAdminAccess } = state;
+  return {
+    chkAdminAccess
+  };
+}
+const checkLoginAccess = connect(mapStateToProps)(Login);
+export { checkLoginAccess as Login };

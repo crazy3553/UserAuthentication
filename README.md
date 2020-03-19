@@ -12,7 +12,7 @@
     -->npm run mock:api
   * Application will run in http://localhost:4000 environment
 
-# Configurayions for UI(Second)
+# Configuration for UI(Second)
 
 - * To run the project
     -->npm start

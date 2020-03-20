@@ -1,23 +1,62 @@
 import React, { Component } from "react";
-import {connect} from "react-redux";
+import { connect } from "react-redux";
 import { Form, Button, Col, Container, Card } from "react-bootstrap";
-import { history } from "../../_helpers";
-class Login extends Component {
+import { history, store } from "../../_helpers";
+import { LoginAction } from "../../_actions";
+
+export class Login extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      isValidated: false,
+      userName: "",
+      password: ""
+    };
     this.redirectRegistration = this.redirectRegistration.bind(this);
+    this.SubmitLogin = this.SubmitLogin.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+  }
+  componentWillMount() {
+    sessionStorage.removeItem("UserName");
+    sessionStorage.removeItem("Role");
   }
   redirectRegistration = () => {
     history.push("/Registration");
   };
- 
+  SubmitLogin = e => {
+    let LoginDetails = [];
+    e.preventDefault();
+    e.stopPropagation();
+    const form = e.currentTarget;
+    try {
+      if (form.checkValidity() === true) {
+        LoginDetails.push({
+          UserName: this.state.userName,
+          Password: this.state.password
+        });
+        store.dispatch(LoginAction.Login(LoginDetails));
+      } else {
+        this.setState({ isValidated: true });
+      }
+    } catch (error) {}
+  };
+  handleChange = e => {
+    try {
+      this.setState({ [e.target.name]: e.target.value });
+    } catch (error) {}
+  };
   render() {
     return (
       <div>
         <Container className="loginMainContent">
           <Col md={8}>
             <Card className="loginForm">
-              <Form>
+              <Form
+                noValidate
+                autoComplete="off"
+                validated={this.state.isValidated}
+                onSubmit={this.SubmitLogin}
+              >
                 <Form.Row>
                   <Form.Group as={Col} controlId="username">
                     <Form.Label>User Name</Form.Label>
@@ -25,7 +64,14 @@ class Login extends Component {
                       type="text"
                       autoComplete="off"
                       placeholder="User Name"
+                      name="userName"
+                      value={this.state.userName}
+                      onChange={this.handleChange}
+                      required
                     />
+                    <Form.Control.Feedback type="invalid">
+                      Please Enter User Name
+                    </Form.Control.Feedback>
                   </Form.Group>
                 </Form.Row>
                 <Form.Row>
@@ -35,7 +81,14 @@ class Login extends Component {
                       type="password"
                       autoComplete="none"
                       placeholder="Password"
+                      name="password"
+                      value={this.state.password}
+                      onChange={this.handleChange}
+                      required
                     />
+                    <Form.Control.Feedback type="invalid">
+                      Please Enter Password
+                    </Form.Control.Feedback>
                   </Form.Group>
                 </Form.Row>
                 <Form.Row>
@@ -61,11 +114,3 @@ class Login extends Component {
     );
   }
 }
-function mapStateToProps(state) {
-  const { chkAdminAccess } = state;
-  return {
-    chkAdminAccess
-  };
-}
-const checkLoginAccess = connect(mapStateToProps)(Login);
-export { checkLoginAccess as Login };

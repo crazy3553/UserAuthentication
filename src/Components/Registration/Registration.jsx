@@ -71,7 +71,6 @@ export class Registration extends Component {
         this.setState({ isValidated: true });
       }
     } catch (error) {
-      debugger;
     }
   };
   submitDetails = () => {
@@ -93,7 +92,6 @@ export class Registration extends Component {
       PhoneNumber: personMobNo,
       Password: password
     });
-    console.log(store.getState().chkAccess.items);
     if (store.getState().chkAccess.items != undefined) {
       if (store.getState().chkAccess.items) {
         role = "Admin";

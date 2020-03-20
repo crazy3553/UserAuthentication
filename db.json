@@ -1,5 +1,122 @@
 {
-  "User_Role": [],
-  "User_Login": [],
-  "UserDetails": []
+  "User_Role": [
+    {
+      "username": "nitesh174kumar@gmail.com",
+      "role": "Admin",
+      "id": 1
+    },
+    {
+      "username": "richa@yahoo.com",
+      "role": "Guest",
+      "id": 2
+    },
+    {
+      "username": "rohan@outlook.com",
+      "role": "Guest",
+      "id": 3
+    },
+    {
+      "username": "deepika@gmail.com",
+      "role": "Guest",
+      "id": 4
+    },
+    {
+      "username": "nitesh@gmail.com",
+      "role": "Guest",
+      "id": 5
+    },
+    {
+      "username": "deepika1@gmail.com",
+      "role": "Guest",
+      "id": 6
+    }
+  ],
+  "User_Login": [
+    {
+      "username": "nitesh174kumar@gmail.com",
+      "password": "1234",
+      "id": 1
+    },
+    {
+      "username": "richa@yahoo.com",
+      "password": "1234",
+      "id": 2
+    },
+    {
+      "username": "rohan@outlook.com",
+      "password": "1234",
+      "id": 3
+    },
+    {
+      "username": "deepika@gmail.com",
+      "password": "0987",
+      "id": 4
+    },
+    {
+      "username": "nitesh@gmail.com",
+      "password": "12",
+      "id": 5
+    },
+    {
+      "username": "deepika1@gmail.com",
+      "password": "1234",
+      "id": 6
+    }
+  ],
+  "UserDetails": [
+    {
+      "Name": "Nitesh Kumar",
+      "Age": "23",
+      "Email": "nitesh174kumar@gmail.com",
+      "Gender": "Male",
+      "PhoneNumber": "9201920192",
+      "Password": "1234",
+      "id": 1
+    },
+    {
+      "Name": "Richa Chadda",
+      "Age": "23",
+      "Email": "richa@yahoo.com",
+      "Gender": "Male",
+      "PhoneNumber": "9302930293",
+      "Password": "1234",
+      "id": 2
+    },
+    {
+      "Name": "Rohan Sinha",
+      "Age": "45",
+      "Email": "rohan@outlook.com",
+      "Gender": "Male",
+      "PhoneNumber": "9392039203",
+      "Password": "1234",
+      "id": 3
+    },
+    {
+      "Name": "Deepika Sinha",
+      "Age": "29",
+      "Email": "deepika@gmail.com",
+      "Gender": "Female",
+      "PhoneNumber": "9203923029",
+      "Password": "0987",
+      "id": 4
+    },
+    {
+      "Name": "Johan",
+      "Age": "29",
+      "Email": "nitesh@gmail.com",
+      "Gender": "Male",
+      "PhoneNumber": "3902932093",
+      "Password": "12",
+      "id": 5
+    },
+    {
+      "Name": "Peter Parker",
+      "Age": "23",
+      "Email": "deepika1@gmail.com",
+      "Gender": "Male",
+      "PhoneNumber": "9032930923",
+      "Password": "1234",
+      "id": 6
+    }
+  ]
 }

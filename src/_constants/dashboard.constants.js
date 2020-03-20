@@ -1,0 +1,5 @@
+export const DashboardConstants = {
+    DASH_DETAILS_SUCCESS: "DASH_DETAILS_SUCCESS",
+    DASH_DETAILS_ERROR: "DASH_DETAILS_ERROR"
+  };
+  

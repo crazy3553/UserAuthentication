@@ -27,6 +27,5 @@ function AdminAccountAccess() {
   }
   function failure(error) {
     return { type: checkAdminConstant.CHK_ADMIN_ACCESS_ERROR, error };
-    return error;
   }
 }
